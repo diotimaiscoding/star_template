@@ -1,0 +1,64 @@
+/* Styles shared across website, documents, slides etc */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,700,900&display=swap&subset=latin-ext');
+
+:root {
+	--gray: 220, 10%;
+
+	--c1-hs: 335, 100%;
+	--c1: hsl(var(--c1-hs), 35%);
+	--c1-light: hsl(var(--c1-hs), 78%);
+
+	--c2-hs: 270, 50%;
+	--c2: hsl(var(--c2-hs), 40%);
+	--c2-light: hsl(var(--c2-hs), 75%);
+
+	--c3-hs: 200, 70%;
+	--c3: hsl(var(--c3-hs), 40%);
+	--c3-light: hsl(var(--c3-hs), 75%);
+
+	--c4-hs: 150, 65%;
+	--c4: hsl(var(--c4-hs), 35%);
+	--c4-light: hsl(var(--c4-hs), 65%);
+
+	--size: 400vmin;
+
+	--rainbow-offset: calc(var(--random, 0) * var(--size));
+	--rainbow: repeating-linear-gradient(-45deg,
+			var(--c1), var(--c2), var(--c3), var(--c4), var(--c3), var(--c2), var(--c1) 50%
+		) var(--rainbow-offset) 0 / var(--size) var(--size) fixed;
+	--rainbow-scroll: scroll 25s linear;
+
+	--font-body: Helvetica Neue, system-ui, sans-serif;
+	--font-mono: Consolas, Monaco, Menlo, monospace;
+}
+
+@keyframes scroll { to {background-position-x: var(--size)}}
+
+:root {
+	font: 100%/1.6 var(--font-body);
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+a {
+	color: inherit;
+}
+
+	a:not(:hover):not(:focus) {
+		text-decoration: none;
+	}
+
+pre, code {
+	font-family: var(--font-mono);
+}
+
+iframe {
+	border: 0;
+}
+
+md-block:not([rendered]) {
+	white-space: pre-line;
+}

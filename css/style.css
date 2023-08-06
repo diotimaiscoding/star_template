@@ -1,0 +1,661 @@
+@import url("base.css");
+
+body {
+	display: flex;
+	flex-flow: column;
+	background: var(--rainbow);
+	background-position-x: var(--rainbow-offset);
+}
+
+section {
+	margin: 3em 0 1em;
+}
+
+h3 {
+	font-size: 150%;
+}
+
+figure {
+	position: relative;
+    width: 100%;
+	z-index: 1;
+	float: left;
+	margin: 0 0 1.5em 1em;
+}
+
+figure.separate {
+	border: 1px solid var(--c4);
+	padding: 2em 3em;
+	background: white;
+}
+
+figcaption {
+	counter-increment: figure
+}
+
+#toc ul:has(+ul) {
+		margin-bottom: 0;
+	}
+
+#toc ul + ul {
+		margin-top: 0;
+	}
+
+.scrolled body::before {
+	opacity: 0;
+}
+
+#back-to-top {
+	--offset: .8em;
+
+	width: 5.7em;
+	padding: .35em .8em .6em;;
+
+	position: fixed;
+	bottom: var(--offset);
+	right: var(--offset);
+
+	font-size: 70%;
+	font-weight: 500;
+	line-height: 1.15;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: -.02em;
+
+	background: var(--rainbow);
+	color: white;
+	opacity: 0;
+
+	border: 3px solid white;
+	border-radius: 20%;
+
+	cursor: pointer;
+	z-index: 1;
+
+	transform: translateY(2em);
+
+	transition: .35s opacity, .3s transform
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+#back-to-top {
+		transform: translateY(0)
+}
+	}
+
+#back-to-top::before {
+		content: url('data:image/svg+xml,\
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white">\
+			<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />\
+		</svg>');
+		display: block;
+		margin: auto;
+		width: 1.7em;
+		aspect-ratio: 1;
+	}
+
+.back-to-top #back-to-top {
+	opacity: 0.75;
+	transform: translateY(0)
+}
+
+.back-to-top #back-to-top:is(:hover, :active) {
+		opacity: 1;
+		transform: scale(1.05);
+		transition-duration: .2s;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%; /* Ensure it never falls below 100% */
+	line-height: 1.1;
+	padding-bottom: .1em; /* Prevent chopped off descenders in gradient text */
+	margin: 1em 0 .4em
+}
+
+h1 > a:only-child, h2 > a:only-child, h3 > a:only-child, h4 > a:only-child, h5 > a:only-child, h6 > a:only-child {
+		color: inherit;
+		font: inherit
+	}
+
+h1 > a:only-child:not(:hover), h2 > a:only-child:not(:hover), h3 > a:only-child:not(:hover), h4 > a:only-child:not(:hover), h5 > a:only-child:not(:hover), h6 > a:only-child:not(:hover) {
+			text-decoration: none;
+		}
+
+img,
+video {
+	max-width: 100%;
+}
+
+code {
+	word-break: break-all;
+}
+
+table {
+	width: 100%;
+    border-collapse: separate!important;
+	border-spacing: .4em;
+}
+
+	@media (max-width: 800px) {
+			table#staff-table {
+				display: grid;
+				grid-gap: .4em;
+				grid-auto-flow: dense;
+			}
+
+			table#staff-table thead,
+			table#staff-table tr,
+			table#staff-table tbody {
+				display: contents;
+			}
+
+			table#staff-table td,
+			table#staff-table th {
+				grid-row-end: span 2;
+			}
+
+			table#staff-table :nth-child(2),
+			table#staff-table :nth-child(3) {
+				grid-row-end: span 1;
+				grid-column: 2;
+			}
+
+			table#staff-table th:last-child,
+			table#staff-table td:last-child {
+				grid-column: calc(var(--columns) - 1);
+			}
+
+			/* Give up grid, just do top down */
+		}
+
+	@media (max-width: 800px) and (max-width: 550px) {
+					table#staff-table *:not(#foo) {
+						grid-column: 1;
+						grid-row: initial;
+					}
+
+					/* Distinguish rows */
+					table#staff-table td:first-child {
+						margin-top: .8em;
+					}
+			}
+
+body > * {
+	padding: 2rem;
+}
+
+body > header {
+    flex-flow: column;
+	display: flex;
+	color: white;
+	font-size: 150%
+}
+
+body > header h1 {
+		margin: 0;
+		text-align: right;
+		font-weight: 300;
+		font-size: 200%;
+		line-height: 1
+	}
+
+body > header h1 {
+			font-size: 300%
+	}
+
+body > header h1 strong {
+			letter-spacing: -.02em;
+			display: block;
+		}
+
+body > header h1 a {
+			text-decoration-color: hsla(0,0%,100%,.1);
+		}
+
+body > header nav ul {
+			margin: 0;
+			margin-left: 1em;
+			padding: 0;
+			list-style: none;
+		}
+
+		/* Navigation underneath on small screens */
+		body > header {
+			flex-flow: column
+		}
+
+			body > header nav ul {
+				margin-left: 0;
+				padding-left: 0;
+				margin-top: 0;
+				column-width: 4em
+			}
+
+				body > header nav ul li {
+					margin: 0 .4em;
+				}
+
+main {
+	flex: 1;
+	background: hsla(0,0%,100%,.9)
+}
+
+main h2 {
+		font-size: 300%;
+		margin: .5em 0;
+		color: var(--c2);
+	}
+
+main h3 {
+		font-size: 240%;
+		font-weight: 300;
+	}
+
+main a {
+		font-weight: bold;
+		color: var(--c3);
+	}
+
+main a:hover {
+		text-decoration-color: hsla(var(--c3-hs), 40%, .3)
+	}
+
+main pre[class*="language-"] {
+		/* Cutout corner */
+		background: linear-gradient(-135deg, transparent 1em, hsl(0 0% 100% / .5) 0, hsl(0 0% 100% / .9));
+	}
+
+/* Callouts */
+
+div.assignment-due,
+	p.assignment-due,
+	div.tip,
+	p.tip,
+	div.warning,
+	p.warning,
+	div.note,
+	p.note,
+	div.deliverable,
+	p.deliverable,
+	div.announcement,
+	p.announcement,
+	div.future,
+	p.future {
+		width: fit-content;
+		padding: .5em .8em;
+		border-radius: .3em;
+	}
+
+div.tip,
+	p.tip,
+	div.warning,
+	p.warning,
+	div.deliverable,
+	p.deliverable,
+	div.announcement,
+	p.announcement,
+	div.note,
+	p.note,
+	div.future,
+	p.future {
+		position: relative;
+		background: white;
+		padding-left: 1.5em
+	}
+
+div.tip::after, p.tip::after, div.warning::after, p.warning::after, div.deliverable::after, p.deliverable::after, div.announcement::after, p.announcement::after, div.note::after, p.note::after, div.future::after, p.future::after {
+			content: var(--icon);
+			font-size: 200%;
+			position: absolute;
+			top: -.6em;
+			left: -.5em;
+			font-family: emoji;
+		}
+
+div.tip:is(:not(p)), p.tip:is(:not(p)), div.warning:is(:not(p)), p.warning:is(:not(p)), div.deliverable:is(:not(p)), p.deliverable:is(:not(p)), div.announcement:is(:not(p)), p.announcement:is(:not(p)), div.note:is(:not(p)), p.note:is(:not(p)), div.future:is(:not(p)), p.future:is(:not(p)) {
+			margin: 1em 0
+		}
+
+div.tip:is(:not(p)) > :is(p, ul, ol):first-child, p.tip:is(:not(p)) > :is(p, ul, ol):first-child, div.warning:is(:not(p)) > :is(p, ul, ol):first-child, p.warning:is(:not(p)) > :is(p, ul, ol):first-child, div.deliverable:is(:not(p)) > :is(p, ul, ol):first-child, p.deliverable:is(:not(p)) > :is(p, ul, ol):first-child, div.announcement:is(:not(p)) > :is(p, ul, ol):first-child, p.announcement:is(:not(p)) > :is(p, ul, ol):first-child, div.note:is(:not(p)) > :is(p, ul, ol):first-child, p.note:is(:not(p)) > :is(p, ul, ol):first-child, div.future:is(:not(p)) > :is(p, ul, ol):first-child, p.future:is(:not(p)) > :is(p, ul, ol):first-child {
+					margin-top: 0;
+				}
+
+div.tip:is(:not(p)) > :is(p, ul, ol):last-child, p.tip:is(:not(p)) > :is(p, ul, ol):last-child, div.warning:is(:not(p)) > :is(p, ul, ol):last-child, p.warning:is(:not(p)) > :is(p, ul, ol):last-child, div.deliverable:is(:not(p)) > :is(p, ul, ol):last-child, p.deliverable:is(:not(p)) > :is(p, ul, ol):last-child, div.announcement:is(:not(p)) > :is(p, ul, ol):last-child, p.announcement:is(:not(p)) > :is(p, ul, ol):last-child, div.note:is(:not(p)) > :is(p, ul, ol):last-child, p.note:is(:not(p)) > :is(p, ul, ol):last-child, div.future:is(:not(p)) > :is(p, ul, ol):last-child, p.future:is(:not(p)) > :is(p, ul, ol):last-child {
+					margin-bottom: 0;
+				}
+
+div.tip, p.tip {
+		--icon: "💡 "
+	}
+
+div.warning, p.warning {
+		--icon: "⚠️ ";
+	}
+
+div.note, p.note {
+		--icon: "👉🏼 ";
+	}
+
+div.deliverable, p.deliverable {
+		--icon: "👉🏼 ";
+	}
+
+div.announcement, p.announcement {
+		--icon: "📣";
+	}
+
+div.future, p.future {
+		--icon: "🔮";
+	}
+
+th,
+td {
+	border-radius: .2rem;
+}
+
+th:not(:empty) {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	padding: .2em;
+	order: -1;
+	color: var(--c2);
+	font-size: 120%;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	background: var(--rainbow);
+	color: hsla(0, 0%, 100%, .8);
+	letter-spacing: -.02em;
+}
+
+td {
+	padding: .6em;
+	background: white;
+}
+
+table#schedule {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	counter-reset: lecture week
+
+	/* hide headers on smaller screens with screen-reader only css */
+}
+
+@media (max-width: 950px) {
+		table#schedule th {
+			position:absolute;
+			left:-10000px;
+			top:auto;
+			width:1px;
+			height:1px;
+			overflow:hidden;
+		}
+	}
+
+@media (min-width: 950px) {
+		/* 3 columns on larger screens */
+		table#schedule {
+			grid-template-columns: 1fr 1fr auto;
+		}
+	}
+
+table#schedule tr,
+	table#schedule thead,
+	table#schedule tbody {
+		display: contents;
+	}
+
+table#schedule td {
+		position: relative;
+		display: grid;
+		grid-template-columns: minmax(6em, min-content) 1fr;
+		--day: "Mon"
+	}
+
+table#schedule td:nth-child(2) {
+			--day: "Wed";
+		}
+
+table#schedule td:nth-child(3) {
+			--day: "Fri";
+		}
+
+table#schedule td:first-child::before {
+			counter-increment: week;
+			content: "Week " counter(week);
+			position: absolute;
+			right: 100%;
+			top: .5em;
+			writing-mode: vertical-rl;
+			transform: rotate(.5turn);
+			color: white;
+			text-transform: uppercase;
+			font-weight: bold;
+			line-height: .9;
+		}
+
+table#schedule td:not(.no-class):not(:nth-child(3)) .title::before {
+			counter-increment: lecture;
+			content: "Lecture " counter(lecture);
+			display: block;
+			text-transform: uppercase;
+			font-size: 80%;
+		}
+
+table#schedule td.today,
+		table#schedule td.upcoming {
+			overflow: hidden
+		}
+
+table#schedule td.today::after, table#schedule td.upcoming::after {
+				content: "Today";
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: .3em 2em;
+				transform: rotate(45deg) translate(25%, -.8em);
+				text-transform: uppercase;
+				font-size: 60%;
+				font-weight: bold;
+				background: var(--c1);
+				color: white;
+			}
+
+table#schedule td.today.upcoming::after, table#schedule td.upcoming.upcoming::after {
+				content: "Upcoming";
+				background: var(--c4);
+			}
+
+table#schedule td.no-class .title {
+				font-style: italic;
+			}
+
+table#schedule td.no-class > time,
+			table#schedule td.no-class > .title {
+				opacity: .5;
+			}
+
+table#schedule td > :not(time) {
+			grid-column: 2;
+		}
+
+table#schedule td time {
+			grid-column: 1;
+			grid-row: 1 / span 4;
+			border: 1px solid transparent;
+			background: linear-gradient(transparent .6em, hsla(0, 0%, 100%, .9) 0), var(--rainbow);
+			background-clip: padding-box, border-box;
+			text-align: center;
+			font-size: 250%;
+			margin-right: .4em;
+			margin-bottom: auto;
+			border-radius: 2px;
+			white-space: pre-line;
+			text-transform: uppercase;
+			display: flex;
+			flex-direction: column
+		}
+
+table#schedule td time .month {
+				font-size: 40%;
+				color: white;
+				font-weight: bold;
+			}
+
+@media (max-width: 949px) {
+			table#schedule td {
+				grid-template-columns: 7em 1fr;
+			}
+				table#schedule td time .month::before {
+					content: var(--day) ", ";
+					opacity: .7;
+				}
+		}
+
+table#schedule td > a {
+			display: block;
+			margin-top: .3em;
+			margin-bottom: auto;
+			width: max-content;
+			color: inherit;
+			font-weight: inherit;
+		}
+
+table#schedule a {
+		color: inherit;
+	}
+
+.topic-tag {
+	display: inline-block;
+	padding: .1em .5em .05em;
+	border-radius: .2em;
+	font-size: 80%;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: white;
+	background: var(--color)
+}
+
+.topic-tag::before {
+		content: "#";
+		font-weight: 300;
+	}
+
+.topic-tag.hci {
+		--color: var(--c1);
+	}
+
+.topic-tag.dev {
+		--color: var(--c2);
+	}
+
+.topic-tag.design {
+		--color: var(--c3);
+	}
+
+.assignment-due,
+#schedule .assignment-due,
+#schedule .caution {
+	background: hsla(0, 100%, 50%, .15);
+	padding: .1em .5em;
+	border-radius: .15em;
+	color: hsl(0, 100%, 20%);
+	font-weight: bold;
+}
+
+#schedule .assignment-due {
+	font-weight: bold;
+}
+
+#schedule .pre-reading {
+
+}
+
+	#schedule .pre-reading::before,
+	#schedule .assignment-released::before,
+	.assignment-due::before {
+		content: "";
+		display: inline-block;
+		vertical-align: -.1em;
+		width: 1em;
+		height: 1em;
+		background: var(--icon) no-repeat, var(--rainbow);
+		--icon: url('data:image/svg+xml,\
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
+			<text y="1em" font-size="90">📚</text>\
+		</svg>');
+		-webkit-mask-image: var(--icon);
+		background-blend-mode: luminosity, normal;
+		font-size: 110%;
+	}
+
+	.assignment-due::before {
+		content: "";
+		--icon: url('data:image/svg+xml,\
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
+			<text y="1em" font-size="90">⌛️</text>\
+		</svg>');
+		background: var(--icon) no-repeat, var(--c1);
+	}
+
+#schedule .assignment-released::before {
+		content: "";
+		--icon: url('data:image/svg+xml,\
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
+			<text y="1em" font-size="90">⏳</text>\
+		</svg>');
+	}
+
+/* Rainbow text */
+@supports (-webkit-background-clip: text) {
+	main h2,
+	#schedule td:not(.no-class) .title::before {
+		background: var(--rainbow);
+		-webkit-background-clip: text;
+		color: transparent;
+
+		/* Workaround for Gecko bugs #1313757 #1571244 */
+		background-attachment: scroll;
+		background-position: calc(var(--rainbow-offset) - var(--left)) calc(-1 * var(--top));
+	}
+}
+
+/* Rainbow Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, #e62b2b 0%, #580096 73%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(0deg, #e82c2c 0%, #380099 73%)
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.email::after {
+	content: "@gmail.com"
+}
+
+[mv-app][mv-permissions~="logout"] .mv-if-logged-out {
+	display: none;
+}
+
+.prevnext {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1em 0;
+}

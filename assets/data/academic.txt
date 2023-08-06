@@ -1,0 +1,121 @@
+title:  project_manager
+name:   Gamze Özel Kadılar
+Institution: Hacettepe Üniversitesi
+Major: İstatistik
+mail:   gamzeozl@hacettepe.edu.tr
+
+title:	advisor
+name:	Prof. Dr. Tolga Çan
+Institution:	Çukurova Üniversitesi
+Major:	Jeoloji Mühendisliği
+mail:	tolgacan@cukurova.edu.tr
+
+title:	researcher
+name:	Prof. Dr. Ecir Uğur Küçüksille
+Institution:	Süleyman Demirel Üniversitesi
+Major:	Bilgisayar Mühendisliği
+mail:	ecirkucuksille@sdu.edu.tr
+
+title:	researcher
+name:	Doç. Dr. Emrah Altun
+Institution:	Bartın Üniversitesi
+Major:	Matematik
+mail:	emrahaltun123@gmail.com
+
+title:	researcher
+name:	Doç. Dr. Hatice Öncel Çekim
+Institution:	Hacettepe Üniversitesi
+Major:	İstatistik
+mail:	oncelhatice@hacettepe.edu.tr
+
+title:	researcher
+name:	Doç. Dr. Senem Tekin
+Institution:	Adıyaman Üniversitesi
+Major:	Madencilik ve Maden Çıkarma
+mail:	senemtekin@adiyaman.edu.tr
+
+title:	researcher
+name:	Dr. Öğr. Üyesi Tuba Eroğlu Azak
+Institution:	Milli Savunma Üniversitesi
+Major:	İnşaat Mühendisliği
+mail:	tuba.eroglu@gmail.com
+
+title:	project_bursary
+type:	Doktora
+name:	Öğr. Gör. Saliha Fişek
+Institution:	Süleyman Demirel Üniversitesi
+Major:	Bilgisayar Mühendisliği
+Status:	Tamamlandı
+Term:	2023
+
+title:	project_bursary
+type:	Doktora
+name:	Arş. Gör. Dr. Ceren Ünal
+Institution:	Hacettepe Üniversitesi
+Major:	İstatistik
+Status:	Tamamlandı
+Term:	2021-2022
+
+title:	project_bursary
+type:	Yüksek Lisans
+name:	Hasan Hüseyin Pay
+Institution:	Süleyman Demirel Üniversitesi
+Major:	Bilgisayar Mühendisliği
+Status:	Tamamlandı
+Term:	2022
+
+title:	project_bursary
+type:	Yüksek Lisans
+name:	Hatice Karakavak
+Institution:	Hacettepe Üniversitesi
+Major:	İstatistik
+Status:	Devam Ediyor
+Term:	2023
+
+title:	project_bursary
+type:	Lisans
+name:	Emre Özkan
+Institution:	Nişantaşı Üniversitesi
+Major:	Yazılım Mühendisliği
+Status:	Tamamlandı
+Term:	2021-2022
+
+title:	project_bursary
+type:	2247-C STAR
+name:	Tunahan Oğuz
+Institution:	TOBB Üniversitesi
+Major:	Yapay Zeka Mühendisliği
+Status:	Tamamlandı
+Term:	2020/2
+
+title:	project_bursary
+type:	2247-C STAR
+name:	Damla Pektaş
+Institution:	Beykent Üniversitesi
+Major:	Yazılım Mühendisliği
+Status:	Tamamlandı
+Term:	2020/2
+
+title:	project_bursary
+type:	2247-C STAR
+name:	Emre Can Mert
+Institution:	Hacettepe Üniversitesi
+Major:	İstatistik
+Status:	Tamamlandı
+Term:	2021/2
+
+title:	project_bursary
+type:	2247-C STAR
+name:	Gürkan Yılmaz
+Institution:	Hacettepe Üniversitesi
+Major:	İstatistik
+Status:	Tamamlandı
+Term:	2021/2
+
+title:	project_bursary
+type:	2247-C STAR
+name:	Çağla Betül Çam
+Institution:	Hacettepe Üniversitesi
+Major:	Yapay Zeka Mühendisliği
+Status:	Devam Ediyor
+Term:	2022/2

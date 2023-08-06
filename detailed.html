@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>STAR PROJESİ</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="shortcut icon" href="assets/img/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="/website.js" type="module"></script>
+
+
+</head>
+<body>
+
+<header>
+    <!--Navigation Bar with collapsed menu-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Anasayfa</a>
+                </li>
+                <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Detaylı Bilgi <span class="sr-only">(current)</span></a>
+                <div class="dropdown-menu align-top" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="detailed.html#goals">Amaç</a>
+                    <a class="dropdown-item" href="detailed.html#area">Çalışma Sahası</a>
+                    <a class="dropdown-item" href="detailed.html#results">Çıktı ve Sonuçlar</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="detailed.html">Sayfaya Git</a>
+                </div>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Proje Ekibi
+                </a>
+                <div class="dropdown-menu align-top" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="academic.html#project_manager">Proje Yürütücüsü</a>
+                    <a class="dropdown-item" href="academic.html#researchers">Araştırma Görevlileri</a>
+                    <a class="dropdown-item dropdown-toggle" id="internDropdown" role="button" data-toggle="dropdown" aria-hashpopup="false" aria-expanded="true" href="academic.html#interns">Bursiyerler</a>
+                    <div class="dropdown-menu" aria-labelledby="internDropdown">
+                        <a class="dropdown-item" href="academic.html#doctorate">Doktora Bursiyerleri</a>
+                        <a class="dropdown-item" href="academic.html#master">Yüksek Lisans Bursiyerleri</a>
+                        <a class="dropdown-item" href="academic.html#undergraduate">Lisans Bursiyerleri</a>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Başvuru Yöntemleri</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#">İletişim</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="https://www.google.com/search" method="GET">
+                <input class="form-control mr-sm-2" type="search" name="q" placeholder="Ara" aria-label="Search">
+                <input type="hidden" name="as_sitesearch" value="mysite.com"> <!-- Replace mysite.com with site URL -->
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara</button>
+            </form>
+        </div>
+    </nav>
+    <!--End of Navigation Bar with collapsed menu--> 
+</header>
+
+
+<main>
+    <h2 id="detailed-information" tabindex="-1"><a class="header-anchor" href="#detailed_information">Detaylı Bilgi</a></h2>
+<section id=info>
+<h3 id="project-summary" tabindex="-1"><a class="header-anchor" href="#project-summary">Proje Özeti</a></h3>
+    <p>
+        Dünyada olduğu gibi Ülkemizde de depremler çok sayıda can ve mal kaybına neden olmaktadır. 
+    Türkiye dünyanın en aktif deprem kuşaklarından biri olan Alp-Himalaya deprem kuşağı üzerinde 
+    bulunmakta olup, yüzölçümünün %42’si birinci derece deprem kuşağı üzerinde yer almaktadır. Ege 
+    Bölgesi, aktif tektonik açısından önemli ve araştırılması gereken bir bölgedir. Batı Anadolu Açılma 
+    Rejiminin etkisi altında Gediz graben sisteminin batı ucunda bulunan bölge, geçmişten günümüze 
+    depremlerden kaynaklı çok fazla hasara maruz kalmıştır. Özellikle son yıllarda meydana gelen 20 Mart 
+    2019 Acıpayam (Denizli) (Mw 5.5), 08 Ağustos 2019 Bozkurt (Denizli) (Mw 6.0), 26 Haziran 2020 
+    Manisa (Mw 5.5), 30 Ekim 2020 (Mw 6.6) Seferihisar (İzmir) depremleri Ege Bölgesi’nin 
+    depremselliğinin araştırılması gerektiğini göstermektedir. Bu proje ile Ege Bölgesi için deprem tehlike 
+    değerlendirmelerinde önemli parametrelerden biri olan deprem tekrarlanma periyodlarının 
+    tahmininde daha esnek ve çarpık verilere daha iyi uyum gösteren bir dağılım önerilerek daha doğru 
+    tahmin modelleri üretilecektir. Bu kapsamda; aktif fay hatlarında yüzey kırığı (>=Mw 6.0) meydana 
+    getirmesi muhtemel depremlerin büyüklükleri, zaman ve sıklık tahminleri elde edilerek yerel 
+    ölçeklerde deprem tehlike haritalarının üretilmesi için yeni bir bakış açısı ortaya çıkarılacaktır.
+    </p>
+</section>
+<section id="goals">
+    <h3 id="project-goals" tabindex="-1"><a class="header-anchor" href="#project-goals">Projenin Amaçları</a></h3>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        Deprem tekrarlanma periyodlarının tahmini için genelleştirilmiş Pareto dağılımına dayalı esnek bir
+                        olasılık modeli geliştirilmesi.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        R yazılımında deprem tekrarlanma periyodlarının tahmininde kullanılacak bir paket yazılması.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Öncü ve artçı deprem sayıları ve deprem büyüklüğünün birleşik Poisson süreci ile incelenmesi.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        R yazılımında deprem frekans, büyüklük ve tekrarlanma periyodlarının beraber tahmini için R
+                        paketi geliştirilmesi.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Deprem büyüklük analizinde Kuantum makine öğrenmesi ve YSA, TSA ve UKSB yöntemlerinden
+                        elde edilen sonuçların karşılaştırılması.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Ege Bölgesi’nde deprem tekrarlanma periyodu ve büyüklük tahminlerinin eski ve yeni haritaya göre
+                        mukayese edilmesi ve değişimin mekânsal olarak CBS tabanlı bir harita ile incelenmesi.
+                    </p>
+                </li>
+            </ul>
+        </p>
+</section>
+<section id="area">
+    <h3 id="project-agean" tabindex="-1"><a class="header-anchor" href="#project-agean">Çalışma Sahası: Ege Bölgesi+200km Bufferzone</a></h3>
+        <p>
+            Ege Bölgesi’nde yer alan 5 il (Aydın, Denizli, Manisa, Muğla, Uşak) ve 54 ilçe. Bu il ve ilçelerin
+            sınırları içerisinde kalan aktif fay hatları ve bu fay hatlarına paralel 200 km bufferzone. 
+        </p>
+        <figure class="seperate">
+            <img src="assets/img/fig_1.png" alt="Ege Bölgesi Bufferzone" width="25%" background="white">
+            <img src="assets/img/fig_2.png" alt="Bölgedeki fay hatları" width="25%">
+            <figcaption>
+                <strong>Şekil 1.</strong> Çalışma alanı ve 200 km’lik tampon bölgede bulunan aktif fay hatları (Emre vd., 2013), SHARE (2014)
+            </figcaption>
+        </figure>
+        <figure class="seperate">
+            <img src="assets/img/fig_3.png" alt="İş paketi 1 kapsamında hazırlanan alansal kaynak modelleri" width="25%">
+            <figcaption>
+                <strong>Şekil 2.</strong> İş paketi 1 kapsamında hazırlanan alansal kaynak modelleri
+            </figcaption>
+        </figure>
+        <figure class="seperate">
+            <img src="assets/img/fig_4.png" alt="Proje kataloğu Mw dağılımları" width="25%">
+            <img src="assets/img/fig_5.png" alt="İl sınırları ile Mw dağılımları" width="25%">
+            <figcaption>
+                <strong>Şekil 3.</strong> Proje kataloğu Mw dağılımları
+            </figcaption>
+        </figure>
+</section>
+<section id="results">
+    <h3 id="project-results" tabindex="-1"><a class="header-anchor" href="#project-results">Proje Çıktı ve Etkileri</a></h3>
+    <h4>SCI Kapsamındaki Makaleler</h4>
+    <ul>
+        <li>
+            <p>
+                Ünal, C., Özel, G., Azak, T., A Markov chain approach for earthquake sequencing in the Aegean 
+                Graben system of Turkey, Earth Science Informatics, 2023, DOI: 10.1007/s12145-023-00961-5
+            </p>
+        </li>
+        <li>
+            <p>
+                Öncel, H., Karakavak, H. Özel, G., Tekin S., Earthquake Magnitude Prediction In Turkey: A 
+                Comparative Study of Deep Learning Methods, ARIMA and Singular Spectrum Analysis, Environmental Earth Sciences, Kabul edildi.
+            </p>
+        </li>
+    </ul>
+    <h4>Uluslarası Tam ve Özet Metin Bildiriler</h4>
+    <ul>
+        <li>
+            <p>
+                Özel, G., Karakavak, H.N., Tekin, S., Characterization of the Earthquakes in the Aegean Region of 
+                Turkey via Shannon Entropy, 3rd International Conference on Applied Engineering and Natural Sciences, 
+                20-23 Temmuz 2022, Konya.
+            </p>
+        <li>
+            <p>
+                Özel, G., Ünal, C., Eroğlu Azak, T. (2022). Markov Model Applied to the Earthquake Magnitude in the 
+                Aegean Region of Turkey, 3rd International Conference on Applied Engineering and Natural Sciences, 
+                20-23 Temmuz 2022, Konya.
+            </p>
+        </li>
+        <li>
+            <p>
+                Özel, G., Çekim, H., Azak, T., Tekin, S., Time-Dependent Models for the Magnitude and Depth of
+                Earthquakes In The Aegean Graben System, Turkey, European Women in Mathematics General Meeting 
+                2022, 22-26 Ağustos 2022, Helsinki, Finlandiya.
+            </p>
+        </li>
+        <li>
+            <p>
+                Çekim, H.O., Kadılar, G., Azak, T., Comparison of Aegean Region Maximum Earthquake Magnitudes 
+                with Time Series Methods, 6th International Conference on Computational Mathematics and 
+                Engineering Sciences, (CMES-2022), 20-22 Mayıs 2022, Ordu. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Pay, H.H., Küçüksille, E.U., Çekim, H., Özel, G., Tekin, S., Classification of Earthquakes in The Aegean 
+                Region Graben System by Clustering Analysis, International Conferences on Science and Technology, 
+                7-9 Eylül 2022, Budva, Montenegro.
+            </p>
+        </li>
+        <li>
+            <p>
+                Özel, G., Yılmaz, G., Mert, E., Tekin, S., Deprem Araştırmalarında Veri Görselleştirme Teknikleri ve 
+                Uygulamaları, 5th International Congress On Engineering Sciences and Multidisciplinary Approaches, 
+                25-26 Şubat 2023, Ankara.
+            </p>
+        </li>
+    </ul>
+    <h4>Ulusal Eğitim-Kurs Verilmesi</h4>
+    <ul>
+        <li>
+            <p>
+                Özel, G., “R Studio ile Doğa Olaylarının Stokastik Süreçler Yardımıyla İncelenmesi-19.01.2023, saat:15:00-16:30”,
+                TÜBİTAK 2237A Doğa Bilimlerinde İstatistiksel Modelleme Teknikleri ve Uygulamaları, 14-20 Ocak 2023, Antalya.
+            </p>
+        </li>
+        <li>
+            <p>
+                Özel, G., “R Studio ile Deprem Verilerinin Görselleştirilmesi- 23.02.2023 saat: 09:00 10:00”, 
+                TÜBİTAK 2237A Veri Görselleştirme Teknikleri Kursu, 21-27 Şubat 2023, Antalya.
+            </p>
+        </li>
+    </ul>
+    <h4>Araştırmacı Yetiştirilmesi</h4>
+    <ul>
+        <li>
+            <p>
+                Hasan Hüseyin Pay, Deprem Büyüklük Tahmininde Olasılıksal Model Tabanlı Yeni Yöntemler ve 
+                Yapay Zekâ Teknikleri, SDÜ Bilgisayar Mühendisliği, 2023, Yüksek Lisans Tezi (Tez Danışmanı: 
+                Prof. Dr. Ecir Uğur Küçüksille, Eş Danışman: Prof. Dr. Gamze Özel Kadılar)
+            </p>
+        </li>
+        <li>
+            <p>
+                Ceren Ünal Akdeniz, Basit Rastgele Örneklemede Cevapsızlık Durumunda Kitle Ortalaması 
+                İçin Tahmin Edici Önerileri, Hacettepe Üniversitesi, İstatistik Bölümü, 2022, Doktora Tezi
+                (Tez Danışmanı: Prof. Dr. Gamze Özel Kadılar)
+            </p>
+        </li>
+        <li>
+            <p>
+                Saliha Fişek, Deprem Tekrarlanma Sürelerinin Tahmininde Kuantum Makine Öğrenmesi ve 
+                İstatistiksel Dağılımların Performanslarının İncelenmesi, SDÜ, Bilgisayar Mühendisliği, Doktora 
+                Tezi (Tez Danışmanı: Prof. Dr. Ecir Uğur Küçüksille, Eş Danışman: Prof. Dr. Gamze Özel Kadılar), 
+                Devam Ediyor.
+            </p>
+        </li>
+    </ul>
+</section>
+
+</main>
+
+<button id="back-to-top">Başa dön</button> 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
